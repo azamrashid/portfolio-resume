@@ -1,15 +1,19 @@
 {
-  "name": "portfolio",
+  "name": "portfolio-resume",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:tailwind": "npx tailwindcss -i ./src/style.css -o ./src/output.css --watch"
+    "build": "npx tailwindcss build -i ./src/style.css -o ./public/output.css --watch",
+    "prod": "NODE_ENV=production npx tailwindcss build ./src/style.css -o ./public/output.css"
   },
   "keywords": [],
-  "author": "",
+  "author": "Azam Rashid",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
   }
 }
